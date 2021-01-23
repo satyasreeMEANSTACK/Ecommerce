@@ -1,0 +1,28 @@
+<div class="container">
+
+
+  <h1 class="text-center"> <span class="text-dark">create</span> <span class="text-muted">Product</span> <span
+      class="text-success">Form</span> </h1>
+
+  <form #ref="ngForm" (ngSubmit)="createproduct(ref)">
+    <div class="form-group">
+      <label for="productname">Name:</label>
+      <input type="text" class="form-control" placeholder="Enter name" name="productname" id="productname" ngModel>
+    </div>
+    <div class="form-group">
+      <label for="productprice">Price:</label>
+      <input type="number" class="form-control" placeholder="Enter Price" name="productprice" id="productprice" ngModel>
+    </div>
+    <div class="form-group">
+      <label for="productdiscount">Discount:</label>
+      <input type="number" class="form-control" placeholder="Enter Discount" name="productdiscount" id="productdiscount"
+        ngModel>
+    </div>
+    <div class="form-group">
+      <label for="productimage">Image:</label>
+      <input type="file" class="form-control" (change)="incomingfile($event)" name="productimage" accept='image/*'
+        placeholder="Upload file">
+    </div>
+    <button type="submit" class="btn btn-primary">createproduct</button>
+  </form>
+</div>

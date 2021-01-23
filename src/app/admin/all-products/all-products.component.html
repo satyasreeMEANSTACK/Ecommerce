@@ -1,0 +1,35 @@
+<div class="container">
+  <h1 class="text-center"> <span class="text-dark">All</span> <span class="text-muted">Products</span> <span
+      class="text-success">Details</span> </h1>      
+<table class="table table-striped table-hover">
+  <thead>
+    <th>Product Id</th>
+    <th>Product Name</th>
+    <th>Product Price</th>
+    <th>Product Discount</th>
+    <th>Product Image</th>
+    <th>Mange</th>
+
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of allProducts">
+      <td>{{product.productID}}</td>
+      <td>{{product.productname}}</td>
+      <td>{{product.productprice}}</td>
+      <td>{{product.productdiscount}}</td>
+     <td><img [src]="product.productimage" alt="" style="height:150px; width:200px;" class="img-thumbnail"></td>
+     <td class=" mx-auto">
+      <button class="btn btn-success" style="margin-right: 10px !important;" (click)="editproduct(product.productID)">edit</button>
+
+
+      <button class="btn btn-danger" (click)="delectproduct(product.productname)">X</button>
+     </td> 
+
+      
+    </tr>
+  </tbody>
+  
+</table> 
+</div>
+
+       

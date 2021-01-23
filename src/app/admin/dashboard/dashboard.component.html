@@ -1,0 +1,41 @@
+
+
+<marquee ><h1 class="text-center text-info"> Admin <span class=" text-success">Dashboard</span> </h1></marquee>
+
+
+<nav class="navbar navbar-light bg-light justify-content-between">
+    
+    <form class="d-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </nav>
+
+<div class="row">
+    <div class="col-sm-3">
+        <nav class="navbar ">
+            <ul class="nav nav-pills  flex-column">
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="viewallusers" style="font-weight: bold; cursor: pointer;" >view All Users</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="allproducts" style="font-weight: bold; cursor: pointer;"  >View All Products</a>
+                </li>
+                <li class="nav-item">
+                  <!-- style="font-weight: bold; cursor: pointer;" -->
+                  <a class="nav-link" routerLink="createproduct"  style="font-weight: bold; cursor: pointer;"  >Create Product</a>
+                </li>
+              </ul>
+        </nav>
+</div>
+
+
+<div class="col-sm-9">
+    <router-outlet></router-outlet>
+
+</div>
+    
+</div>
+
+
+
